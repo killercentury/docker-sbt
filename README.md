@@ -1,1 +1,1 @@
-# docker-sbt
+# Dockerized SBT
