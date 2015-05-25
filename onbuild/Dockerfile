@@ -8,6 +8,5 @@ ONBUILD COPY build.sbt /opt/docker/build.sbt
 ONBUILD RUN sbt about
 ONBUILD RUN sbt clean stage
 ONBUILD COPY target/universal/stage /opt/docker
-
-RUN ["chown", "-R", "daemon", "."]
-USER daemon
+ONBUILD RUN ["chown", "-R", "daemon", "."]
+ONBUILD USER daemon
